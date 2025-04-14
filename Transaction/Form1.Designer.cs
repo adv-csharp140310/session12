@@ -32,11 +32,12 @@ partial class Form1
         buttonEF = new Button();
         buttonScope = new Button();
         buttonRepository = new Button();
+        buttonReport = new Button();
         SuspendLayout();
         // 
         // buttonFail
         // 
-        buttonFail.Location = new Point(154, 30);
+        buttonFail.Location = new Point(30, 12);
         buttonFail.Name = "buttonFail";
         buttonFail.Size = new Size(260, 23);
         buttonFail.TabIndex = 0;
@@ -46,7 +47,7 @@ partial class Form1
         // 
         // buttonEF
         // 
-        buttonEF.Location = new Point(154, 59);
+        buttonEF.Location = new Point(30, 41);
         buttonEF.Name = "buttonEF";
         buttonEF.Size = new Size(260, 23);
         buttonEF.TabIndex = 1;
@@ -56,7 +57,7 @@ partial class Form1
         // 
         // buttonScope
         // 
-        buttonScope.Location = new Point(154, 88);
+        buttonScope.Location = new Point(30, 70);
         buttonScope.Name = "buttonScope";
         buttonScope.Size = new Size(260, 23);
         buttonScope.TabIndex = 2;
@@ -66,7 +67,7 @@ partial class Form1
         // 
         // buttonRepository
         // 
-        buttonRepository.Location = new Point(154, 117);
+        buttonRepository.Location = new Point(30, 99);
         buttonRepository.Name = "buttonRepository";
         buttonRepository.Size = new Size(260, 23);
         buttonRepository.TabIndex = 3;
@@ -74,11 +75,22 @@ partial class Form1
         buttonRepository.UseVisualStyleBackColor = true;
         buttonRepository.Click += buttonRepository_Click;
         // 
+        // buttonReport
+        // 
+        buttonReport.Location = new Point(659, 12);
+        buttonReport.Name = "buttonReport";
+        buttonReport.Size = new Size(129, 37);
+        buttonReport.TabIndex = 4;
+        buttonReport.Text = "Report";
+        buttonReport.UseVisualStyleBackColor = true;
+        buttonReport.Click += buttonReport_Click;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(buttonReport);
         Controls.Add(buttonRepository);
         Controls.Add(buttonScope);
         Controls.Add(buttonEF);
@@ -94,4 +106,5 @@ partial class Form1
     private Button buttonEF;
     private Button buttonScope;
     private Button buttonRepository;
+    private Button buttonReport;
 }

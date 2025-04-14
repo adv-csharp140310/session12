@@ -1,0 +1,17 @@
+Transaction
+Reporting
+	CrystalReport - SAP
+	StimulSoft
+		https://downloadly.ir/software/programming/stimulsoft-reports/
+
+file
+sms
+error handling
+logging
+protect
+deploy - install
+
+
+frameworks
+example api + react
+docker

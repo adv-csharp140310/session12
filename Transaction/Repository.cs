@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace App12;
+namespace AppTransaction;
 internal class Repository
 {
     protected AppDbContext ctx { get; set; }    

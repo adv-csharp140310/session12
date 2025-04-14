@@ -1,5 +1,5 @@
-﻿using App12;
-using AppTransaction.Model;
+﻿using AppTransaction.Model;
+using Stimulsoft.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,5 +72,18 @@ public partial class Form1 : Form
         repo.Create(product);
         repo.Create(ctategory);
         repo.SaveChanges();
+    }
+
+    private void buttonReport_Click(object sender, EventArgs e)
+    {
+        var repo = new Repository();
+        var data = repo.AsQueryable<Product>().Where(x=>x.IsDelete).ToList();
+
+        var report = new StiReport();
+        report.RegBusinessObject("ProductBO", data);
+        report.RegBusinessObject("General", new { QR = "XYZ", Title = "World" });
+        report.Load("AppReport.mrt");
+        report.Show();
+
     }
 }
