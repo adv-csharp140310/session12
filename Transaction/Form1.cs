@@ -78,7 +78,7 @@ public partial class Form1 : Form
     private void buttonReport_Click(object sender, EventArgs e)
     {
         var repo = new Repository();
-        var data = repo.AsQueryable<Product>().Where(x=>x.IsDelete).ToList();
+        var data = repo.AsQueryable<Product>().Where(x => x.IsDelete).ToList();
 
         var report = new StiReport();
         report.RegBusinessObject("ProductBO", data);
@@ -92,5 +92,15 @@ public partial class Form1 : Form
         report.Load(reportFileStream);
         report.Show();
 
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        var repo = new Repository();
+        var product = new Product { Name = "Monitor LG", Price = 100, Description = "Test" };
+        var ctategory = new Category { Name = "Monitor", IsActive = true, Description = "Test" };
+        repo.Create(product);
+        repo.Create(ctategory);
+        repo.SaveChanges();
     }
 }

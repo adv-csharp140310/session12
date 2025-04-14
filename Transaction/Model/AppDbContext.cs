@@ -7,7 +7,8 @@ internal class AppDbContext : DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("data source=.;initial catalog=cs140310_transaction;integrated security=True;trustservercertificate=True;MultipleActiveResultSets=True;App=EFCodeFirst");
+        //optionsBuilder.UseSqlServer("data source=.;initial catalog=cs140310_transaction;integrated security=True;trustservercertificate=True;MultipleActiveResultSets=True;App=EFCodeFirst");
+        optionsBuilder.UseSqlite("Data Source=databse.dat");
         optionsBuilder.LogTo(msg => Debug.WriteLine(msg));
         base.OnConfiguring(optionsBuilder);
     }
