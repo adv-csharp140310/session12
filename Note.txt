@@ -4,6 +4,7 @@ Reporting
 	StimulSoft
 		https://downloadly.ir/software/programming/stimulsoft-reports/
 
+embeded database - sqlite
 file
 sms
 error handling

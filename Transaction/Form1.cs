@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -82,7 +83,13 @@ public partial class Form1 : Form
         var report = new StiReport();
         report.RegBusinessObject("ProductBO", data);
         report.RegBusinessObject("General", new { QR = "XYZ", Title = "World" });
-        report.Load("AppReport.mrt");
+
+
+        var reportFileStream = Assembly
+            .GetExecutingAssembly()
+            .GetManifestResourceStream("AppTransaction.AppReport.mrt");
+        //report.Load("AppReport.mrt");
+        report.Load(reportFileStream);
         report.Show();
 
     }
