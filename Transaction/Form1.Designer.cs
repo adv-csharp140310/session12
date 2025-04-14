@@ -35,6 +35,8 @@ partial class Form1
         buttonReport = new Button();
         button1 = new Button();
         buttonFileIO = new Button();
+        buttonCheckPass = new Button();
+        textBox1 = new TextBox();
         SuspendLayout();
         // 
         // buttonFail
@@ -107,11 +109,30 @@ partial class Form1
         buttonFileIO.UseVisualStyleBackColor = true;
         buttonFileIO.Click += buttonFileIO_Click;
         // 
+        // buttonCheckPass
+        // 
+        buttonCheckPass.Location = new Point(665, 246);
+        buttonCheckPass.Name = "buttonCheckPass";
+        buttonCheckPass.Size = new Size(75, 23);
+        buttonCheckPass.TabIndex = 7;
+        buttonCheckPass.Text = "Check Pass";
+        buttonCheckPass.UseVisualStyleBackColor = true;
+        buttonCheckPass.Click += buttonCheckPass_Click;
+        // 
+        // textBox1
+        // 
+        textBox1.Location = new Point(459, 246);
+        textBox1.Name = "textBox1";
+        textBox1.Size = new Size(200, 23);
+        textBox1.TabIndex = 8;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(textBox1);
+        Controls.Add(buttonCheckPass);
         Controls.Add(buttonFileIO);
         Controls.Add(button1);
         Controls.Add(buttonReport);
@@ -122,6 +143,7 @@ partial class Form1
         Name = "Form1";
         Text = "Form1";
         ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
@@ -133,4 +155,6 @@ partial class Form1
     private Button buttonReport;
     private Button button1;
     private Button buttonFileIO;
+    private Button buttonCheckPass;
+    private TextBox textBox1;
 }

@@ -111,7 +111,19 @@ public partial class Form1 : Form
         var data = repo.AsQueryable<Product>().ToList();
         var json = JsonSerializer.Serialize(data);
 
-        await File.WriteAllTextAsync(@"e:/data.json", json);        
+        await File.WriteAllTextAsync(@"e:/data.json", json);
         var xyz = await File.ReadAllTextAsync(@"e:/data.json");
+    }
+
+    private void buttonCheckPass_Click(object sender, EventArgs e)
+    {
+        if(textBox1.Text == "P@ss!")
+        {
+            MessageBox.Show("Correct");
+        }
+        else
+        {
+            MessageBox.Show("Wrong!");
+        }
     }
 }

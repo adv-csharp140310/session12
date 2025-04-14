@@ -7,12 +7,14 @@ Reporting
 embeded database - sqlite
 file
 sms
+protect - obfuscator
+deploy - installer
+	installShiled
+	AdvanceInstaller
+
+
 error handling
 logging
-protect
-deploy - install
-
-
 frameworks
 example api + react
 docker
