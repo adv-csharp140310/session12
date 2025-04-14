@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
@@ -102,5 +103,15 @@ public partial class Form1 : Form
         repo.Create(product);
         repo.Create(ctategory);
         repo.SaveChanges();
+    }
+
+    private async void buttonFileIO_Click(object sender, EventArgs e)
+    {
+        var repo = new Repository();
+        var data = repo.AsQueryable<Product>().ToList();
+        var json = JsonSerializer.Serialize(data);
+
+        await File.WriteAllTextAsync(@"e:/data.json", json);        
+        var xyz = await File.ReadAllTextAsync(@"e:/data.json");
     }
 }

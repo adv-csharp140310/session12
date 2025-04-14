@@ -34,6 +34,7 @@ partial class Form1
         buttonRepository = new Button();
         buttonReport = new Button();
         button1 = new Button();
+        buttonFileIO = new Button();
         SuspendLayout();
         // 
         // buttonFail
@@ -96,11 +97,22 @@ partial class Form1
         button1.UseVisualStyleBackColor = true;
         button1.Click += button1_Click;
         // 
+        // buttonFileIO
+        // 
+        buttonFileIO.Location = new Point(30, 275);
+        buttonFileIO.Name = "buttonFileIO";
+        buttonFileIO.Size = new Size(260, 23);
+        buttonFileIO.TabIndex = 6;
+        buttonFileIO.Text = "Write / Read File";
+        buttonFileIO.UseVisualStyleBackColor = true;
+        buttonFileIO.Click += buttonFileIO_Click;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(buttonFileIO);
         Controls.Add(button1);
         Controls.Add(buttonReport);
         Controls.Add(buttonRepository);
@@ -120,4 +132,5 @@ partial class Form1
     private Button buttonRepository;
     private Button buttonReport;
     private Button button1;
+    private Button buttonFileIO;
 }
